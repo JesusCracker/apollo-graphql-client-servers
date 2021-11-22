@@ -36,6 +36,10 @@ module.exports = {
             // console.dir(context.req.headers)
             const user = checkAuth(context);
 
+            if (body.trim() === '') {
+                throw new Error('post body 不为空');
+            }
+
             const newPost = new Post({
                 body,
                 username: user.username,

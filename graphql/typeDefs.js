@@ -7,19 +7,19 @@ module.exports = gql`
         body:String!,
         createAt:String!,
         username:String!,
-        comments:[Comments]!,
-        likes:[Likes]!,
+        comments:[Comment]!,
+        likes:[Like]!,
         likeCount:Int!,
         commentCount:Int!,
     }
 
-    type Likes{
+    type Like{
         id:ID!,
         username:String!,
         createAt:String!,
     }
 
-    type Comments{
+    type Comment{
         id:ID!,
         body:String!,
         username:String!,

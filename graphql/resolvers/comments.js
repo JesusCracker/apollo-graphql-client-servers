@@ -23,7 +23,7 @@ module.exports = {
                     username: user.username,
                     createAt: new Date().toISOString(),
                 })
-
+                await post.save();
                 return post
 
             } else {
